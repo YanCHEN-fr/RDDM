@@ -1,6 +1,14 @@
 # RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration
 The official implementation  for "RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration"
 
+  <a href="https://arxiv.org/pdf/2508.19154">
+    <img
+      src="https://img.shields.io/badge/RDDM-Arxiv-red?logo=arxiv&logoColor=red"
+      alt="RDDM Paper on arXiv"
+    />
+   </a>
+
+
 > **RDDM: Practicing RAW Domain Diffusion Model for Real-world Image Restoration** <br>
 <div>
     Yan Chen<sup>1,†</sup>&emsp;
@@ -16,8 +24,11 @@ The official implementation  for "RDDM: Practicing RAW Domain Diffusion Model fo
     <sup>1</sup>Huawei Noah’s Ark Lab, <sup>2</sup>Max Planck Institute for Informatics <br/>
 </div>
 
+---
+
 > **Abstract:**
 We present the RAW domain diffusion model (RDDM), an end-to-end diffusion model that restores photo-realistic images directly from the sensor RAW data. While recent sRGB-domain diffusion methods achieve impressive results, they are caught in a dilemma between high fidelity and realistic generation. As these models process lossy sRGB inputs and neglect the accessibility of the sensor RAW images in many scenarios, e.g., in image and video capturing in edge devices, re- sulting in sub-optimal performance. RDDM obviates this limitation by directly restoring images in the RAW domain, replacing the conventional two-stage im- age signal processing (ISP)→Image Restoration (IR) pipeline. However, a simple adaptation of pre-trained diffusion models to the RAW domain confronts the out- of-distribution (OOD) issues. To this end, we propose: (1) a RAW-domain VAE (RVAE), encoding sensor RAW and decoding it into an enhanced linear domain image, (2) a configurable multi-bayer (CMB) LoRA module, adapting diverse RAW Bayer patterns such as RGGB, BGGR, etc. To compensate for the defi- ciency in the dataset, we develop a scalable data synthesis pipeline synthesizing RAW LQ-HQ pairs from existing sRGB datasets for large-scale training. Ex- tensive experiments demonstrate RDDM’s superiority over state-of-the-art sRGB diffusion methods, yielding higher fidelity results with fewer artifacts.
+![RDDM](./images/paper_arch.png)
 
 ## News
 - [2025.11] This repo is created.
@@ -46,21 +57,19 @@ bash test.sh
 ```
 
 ## Results
-<details>
-<summary>Quantitative Comparisons (click to expand)</summary>
 
-<!-- <p align="center">
-  <img src="./figs/light.png">
-</p> -->
-</details>
+### Qualitative Comparisons on real RAW dataset (DND)
+![RDDM](./images/qualitative_DND.png)
 
-<details>
-<summary>Visual Comparisons (click to expand)</summary>
+### Qualitative Comparisons with diffusion-based methods
+![RDDM](./images/qualitative_comparison_with_diffusion.png)
 
-<!-- <p align="center">
-  <img src="./figs/vis.png">
-</p> -->
-</details>
+### Qualitative Comparisons with GAN-based methods
+![RDDM](./images/qualitative_comparison_with_gan.png)
+
+### Quantitative Comparisons
+![RDDM](./images/quantitative_comparison.png)
+
 
 ## Acknowledgement
 
