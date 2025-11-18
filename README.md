@@ -77,4 +77,3 @@ bash test.sh
 ## Acknowledgement
 
 This work is released under the Apache 2.0 license.
- The codes are based on [OSEDiff](https://github.com/cswry/OSEDiff), [Unprocess](https://github.com/timothybrooks/unprocessing) Please also follow their licenses. Thanks for their awesome works.
