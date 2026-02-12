@@ -64,6 +64,12 @@ bash test.sh
 ### Qualitative Comparisons on real RAW dataset (DND)
 ![RDDM](./images/qualitative_DND.png)
 
+### Qualitative Comparisons on real RAW dataset (SIDD)
+![RDDM](./images/qualitative_SIDD.png)
+
+### Qualitative Comparisons on real RAW dataset (RealCapture)
+![RDDM](./images/qualitative_RealCaptures.png)
+
 ### Qualitative Comparisons with diffusion-based methods
 ![RDDM](./images/qualitative_comparison_with_diffusion.png)
 
